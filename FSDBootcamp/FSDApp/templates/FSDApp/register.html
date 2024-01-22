@@ -66,7 +66,7 @@
           <div class="ml-auto w-25">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
-                <li class="cta"><a href="#contact-section" class="nav-link"><span>Contact Us</span></a></li>
+                <li class="cta"><a href="/login" class="nav-link"><span>Login</span></a></li>
               </ul>
             </nav>
             <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
@@ -95,22 +95,26 @@
                     {% csrf_token %}
                     <h3 class="h4 text-black mb-4"><strong>Register</strong></h3>
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Full Name">
+                      <input type="text" class="form-control" name="fname" placeholder="First Name">
                     </div>
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Email Addresss">
+                      <input type="text" class="form-control" name="lname" name="fname" placeholder="Last Name">
                     </div>
                     <div class="form-group">
-                      <input type="number" class="form-control" placeholder="Contact Number">
+                      <input type="contact" class="form-control" name="contact" name="fname" placeholder="Contact">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control" placeholder="Password">
+                      <input type="text" class="form-control" name="email"placeholder="Email Addresss">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" name="pass1" class="form-control" placeholder="Password">
                     </div>
                     <div class="form-group mb-4">
-                      <input type="password" class="form-control" placeholder="Re-type Password">
+                      <input type="password" name="pass2" class="form-control" placeholder="Re-type Password">
                     </div>
                     <div class="form-group">
-                      <input type="submit" class="btn btn-primary btn-pill" value="Sign up">
+                      <!-- <input type="submit" class="btn btn-primary btn-pill" href="" value="Sign up"> -->
+                      <button type="submit" class="btn btn-primary">Register</button>
                     </div>
                   </form>
 
