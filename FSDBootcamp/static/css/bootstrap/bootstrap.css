@@ -1661,7 +1661,7 @@ textarea.form-control {
   height: auto; }
 
 .form-group {
-  margin-bottom: 1rem; }
+  margin-bottom: 10px; }
 
 .form-text {
   display: block;

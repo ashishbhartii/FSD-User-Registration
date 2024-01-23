@@ -44,7 +44,7 @@ def register(request):
             password2 = form.cleaned_data['password2']
 
             if form.cleaned_data['password1'] != form.cleaned_data['password2']:
-                return HttpResponse("Sorry, passwords don't match.")
+                return render(request, 'FSDApp/invalid_passwords.html')
             
             # Save the user data to your User model or registeredUser model
             # Assuming you have a registeredUser model with email and password fields
@@ -89,7 +89,7 @@ def login(request):
                 auth_login(request, user)
                 return redirect('home')
             else:
-                return HttpResponse("Invalid Credentials")
+                return render(request, 'FSDApp/invalid_credentials.html')
     else:
         form = LoginForm()
 
